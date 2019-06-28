@@ -11,4 +11,4 @@ printThis("Current Exercise: jsbasic-2.js");
   And this means printing to a printer or to a .pdf.
   */
 
-console.log(window.print());
+window.print();
