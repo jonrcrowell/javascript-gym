@@ -13,7 +13,7 @@ printThis("Current Exercise: jsfunction-1.js");
   
   */
 
-const reverseMe = 3227439;
+const reverseMe = 3227439234582344;
 printThis(reverseMe);
 
 function reverseNumber(number) {
@@ -21,7 +21,7 @@ function reverseNumber(number) {
   // of course I can, have to convert to string first
   const split = reverseMe.toString().split("");
   console.log(split);
-  console.log(split.length);
+  console.log("Number of numbers in the array: ", split.length);
   let arr = [];
   for (let i = split.length - 1; i > -1; i--) {
     arr.push(split[i]);
