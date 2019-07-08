@@ -20,7 +20,7 @@ const endYear = 2050
 function listYearsDateIsDayOfWeek(month, day, dayOfWeek, startYear, endYear) {
   let matchingYears = [];
   // loop from startYear to endYear
-  for (let i = startYear; i < endYear + 1; i++) {
+  for (let i = startYear; i <= endYear; i++) {   // ligature for < = (without a space) is <=
     if (isDateOnDayOfWeek(month, day, i, dayOfWeek)) {
       matchingYears.push(i);
     }
