@@ -10,8 +10,8 @@ exNode.data = thisFile
 
 */
 
-const month = 'September'
-const day = 18
+const month = 'July'
+const day = 19
 const dayOfWeek = 'Friday'
 const startYear = 2014
 const endYear = 2050
@@ -26,15 +26,12 @@ function listYearsDateIsDayOfWeek(month, day, dayOfWeek, startYear, endYear) {
     }
   }
   return matchingYears;
-  // return `We are going to find out if ${month} ${day} is on a ${dayOfWeek} between ${startYear} and ${endYear}.`;
 }
 
 function isDateOnDayOfWeek(month, day, year, dayOfWeek) {
   const dateToCheck = new Date(`${month} ${day}, ${year}`);
   const dayIndex = dateToCheck.getDay();
-  if (dayOfWeek === weekdays[dayIndex]) {
-    return true;
-  }
+  return dayOfWeek === weekdays[dayIndex];
 }
 
 const weekdays = [
