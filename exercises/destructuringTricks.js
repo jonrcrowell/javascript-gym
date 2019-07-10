@@ -8,7 +8,7 @@ function getUserInfo({
     lastName = '',
 
     // default value based on other destructured values
-    fullName = `${firstName} ${lastName}`.trim(),
+    fullName = `${firstName} ${lastName}`.trim()
 } = {}) {
     // in the function you know:
     // 1. firstName is provided
