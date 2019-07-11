@@ -14,22 +14,8 @@ printThis("Current Exercise: jsfunction-1.js");
   */
 
 const reverseMe = 3227439234582344;
-printThis(reverseMe);
-
-function reverseNumber(number) {
-  // can I split a number like I can split a string?
-  // of course I can, have to convert to string first
-  const split = reverseMe.toString().split("");
-  console.log(split);
-  console.log("Number of numbers in the array: ", split.length);
-  let arr = [];
-  for (let i = split.length - 1; i > -1; i--) {
-    arr.push(split[i]);
-  }
-  const reversednum = Number.parseInt(arr.join(""));
-  console.log(typeof reversednum);
-  return reversednum;
-}
-
-const reversed = reverseNumber(reverseMe);
+printThis("We are going to try to reverse the following number: ")
+printThis(reverseMe)
+printThis("Check our work below...")
+const reversed = reverseMe.toString().split('').reverse().join('');
 printThis(reversed);
