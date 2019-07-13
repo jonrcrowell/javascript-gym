@@ -6,7 +6,7 @@
 // and any number that is both fizz and buzz should be fizzbuzz
 
 const startNum = 3
-const endNum = 100
+const endNum = 17
 function range(start, stop) {
     // Array(n) creates an empty array of length n
     // .fill fills the empty array with the value start in each slot
