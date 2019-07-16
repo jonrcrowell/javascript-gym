@@ -14,4 +14,4 @@ const numberList = prompt("Enter a comma-separated list of numbers. I will multi
 const numbers = numberList.split(',').map(x => parseInt(x))
 const product = numbers.reduce((x, y) => x * y)
 console.log(numbers)
-console.log(product)
+console.log(new Intl.NumberFormat().format(product))
