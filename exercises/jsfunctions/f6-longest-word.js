@@ -15,11 +15,11 @@ printThis("Current Exercise: jsfunction-6.js");
 
 const input = prompt("Enter a list of words or a sentence. I'll tell you the longest word.")
 
-// TODO: don't count punctuation
 const getLongestWord = function (str) {
-  const words = str.split(' ')
-  const longest = words.map(x => x.length).reduce((x, y) => x > y ? x : y)
-  const longestWord = words.filter(x => x.length === longest)
+  const words = str.replace(/[^a-z]/gi, ' ').split(' ')  // include 0-9 [^a-z0-9] if I want to allow numbers to be counted
+  // gi makes the regex search global and case-insensitive so I don't need to worry about capital letters
+  const maxLength = words.map(x => x.length).reduce((x, y) => x > y ? x : y)
+  const longestWord = words.filter(x => x.length === maxLength)
   // if we have more than one word of the max length, return all of them
   return longestWord.length === 1 ? longestWord[0] : longestWord
 }
