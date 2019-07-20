@@ -14,7 +14,7 @@ printThis("Current Exercise: jsfunction-7.js");
     Expected Output : 5
   */
 
-const input = "The quick brown fox is feeling froggy. Aha!"
+const input = "The quick brown fox"
 
 const getVowelCount = function (str) {
   const vowels = str.replace(/[^aeiou]/gi, '')
@@ -23,4 +23,17 @@ const getVowelCount = function (str) {
   return vowels.length
 }
 
-console.log(getVowelCount(input));
+const getConsonantCount = function (str) {
+  const consonants = str.replace(/[aeiou ]/gi, '')
+  // remove hat to match instead of ignore, add space
+  return consonants.length
+}
+
+const getSpaceCount = function (str) {
+  const spaces = str.replace(/[^ ]/gi, '')
+  return spaces.length
+}
+
+console.log("Number of vowels :", getVowelCount(input));
+console.log("Number of consonants :", getConsonantCount(input))
+console.log("Number of spaces :", getSpaceCount(input))
