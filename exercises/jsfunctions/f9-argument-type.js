@@ -2,7 +2,7 @@ function printThis(input) {
   document.write(`${input} <br><br>`);
 }
 
-printThis("Current Exercise: jsfunction-8.js");
+printThis("Current Exercise: jsfunction-9.js");
 
 /* 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof    
