@@ -7,7 +7,7 @@ printThis("Current Exercise: jsfunction-11.js");
 /* 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof    
 
-https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php
+https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.php
     
     Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.
     Sample array : [1,2,3,4,5]
