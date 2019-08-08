@@ -14,27 +14,28 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
     Expected Output : "thequickbrownfxjmpsvlazydg"
   */
 
-const rawText = "theaaaquickbrownfoxjumpsoverthelazydog"
+const rawText = "thequickbrownfoxjumpsoverthelazydog"
 const uniqueLetters = keepUniqueLetters(rawText)
-const uniqueLettersInOrder = keepUniqueLettersInOrder(rawText)
 console.log(uniqueLetters)
-console.log(uniqueLettersInOrder)
+
+
+// from MDN: The Set object lets you store unique values of any type
+const allUnique = Array.from(new Set(rawText)).join('');
+console.log(allUnique)
+
+const keepUnique = [...new Set(rawText)].join('')
+console.log(keepUnique)
 
 function keepUniqueLetters(str) {
-  const sortedText = str.split('').sort()
-  let uniqueText = []
+  const allLetters = str.split('')
+  let uniqueLetters = []
 
-  sortedText.map((x, idx) => sortedText[idx - 1] !== x
-    ? uniqueText.push(x) : console.log(x)
+  allLetters.map(function (x) {
+    if (!uniqueLetters.includes(x)) {
+      uniqueLetters.push(x)
+    }
+  }
   )
 
-  return uniqueText.join('')
+  return uniqueLetters.join('')
 }
-
-function keepUniqueLettersInOrder(str) {
-  return str
-}
-
-// need to get this to work without the console.log in the ternary statement
-// need to get this to work without sorting the string in order to return
-// the string in the correct order
