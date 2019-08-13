@@ -8,3 +8,7 @@ body {
 .instructions {
   color: #9c4221;
 }
+
+.notracerx::-ms-clear {
+  display: none;
+}
