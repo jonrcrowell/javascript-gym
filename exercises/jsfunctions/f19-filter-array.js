@@ -1,8 +1,6 @@
 // use Quokka to see results in VS Code
 
 /* 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof    
-
 https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.php
     
     Write a JavaScript function that returns array elements larger than a number.
