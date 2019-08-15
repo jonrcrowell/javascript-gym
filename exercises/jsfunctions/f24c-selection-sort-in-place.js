@@ -11,23 +11,18 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
 */
 
 const scrambled = [1, 6, 8, 2, 5]
-let shrinking = [...scrambled]
-const sorted = []
+let sorted = [...scrambled]
+let smallest = 0
+debugger;
+
+function swapUs(arr, i, j) {
+    return [arr[i], arr[j]] = [arr[j], arr[i]]
+}
 
 for (let i = 0; i < scrambled.length; i++) {
-    const smallest = Math.min(...shrinking)
-    sorted.push(smallest)
-    shrinking = removeMeFromArray(smallest, shrinking)
-    // I can either remove the smallest from the shrinking array
-    // or get the next smallest element
-    // I prefer the filter to removing the element, but leaving here for comparison to f24c
+    smallest = Math.min(...sorted.filter(x => x > smallest))
+    const index = sorted.indexOf(smallest)
+    swapUs(sorted, i, index)
 }
 
 console.log(sorted)
-
-function removeMeFromArray(element, array) {
-    let index = array.indexOf(element)
-    const newArray = [...array]
-    newArray.splice(index, 1)
-    return newArray;
-}
