@@ -10,10 +10,9 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
     [1, 4, 9, 12, 23, 64, 84, 98, 122, 213, 234, 345, 455, 546, 3223]
 */
 
-const scrambled = [1, 6, 8, 2, 5]
+const scrambled = [1, 6, 8, 2, 5, 17, 4]
 let sorted = [...scrambled]
 let smallest = 0
-debugger;
 
 function swapUs(arr, i, j) {
     return [arr[i], arr[j]] = [arr[j], arr[i]]
@@ -22,7 +21,8 @@ function swapUs(arr, i, j) {
 for (let i = 0; i < scrambled.length; i++) {
     smallest = Math.min(...sorted.filter(x => x > smallest))
     const index = sorted.indexOf(smallest)
-    swapUs(sorted, i, index)
+    // optimize for adaptability
+    if (i !== index) swapUs(sorted, i, index)
 }
 
 console.log(sorted)
