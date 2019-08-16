@@ -8,26 +8,22 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
     Get the next element in the array and insert it in the correct order in the new array.
 */
 
-const sortMe = [1, 2, 93, 147, 22, 0, 99, 5, 6, 7, 8, -9, 4, 17]
+const sortMe = [11, 2, 93, 147, 22, 0, 99, 5, 6, 7, 8, -9, 4, 17]
 //              [9, 1, 17, 4]
 //             [1, 2, 93, 147, 22, 0, -9, 5, 6, 7, 8, 9, 4, 17]
 
 const sortedOut = insertionSort(sortMe)
 console.log(sortedOut)
 
-function insertionSort(arr) {
-    for (let i = 1; i < arr.length; i++) {
-        const temp = arr[i];
+function insertionSort(scrambledArray) {
+    for (let i = 1; i < scrambledArray.length; i++) {
+        const putMeInPlace = scrambledArray[i];
         let j = 0;
-
-        for (j = i - 1; j >= 0 && (arr[j] > temp); j--) {
-            // shift the number
-            arr[j + 1] = arr[j]
+        for (j = i - 1; j >= 0 && putMeInPlace < scrambledArray[j]; j--) {
+            scrambledArray[j + 1] = scrambledArray[j]
         }
-        //Insert the copied number at the correct position
-        //in sorted part. 
-        arr[j + 1] = temp;
+        // need to write putmeinplace to the correct spot
+        scrambledArray[j + 1] = putMeInPlace;
     }
-    return arr;
+    return scrambledArray;
 }
-
