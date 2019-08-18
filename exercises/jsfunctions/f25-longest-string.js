@@ -8,15 +8,23 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
     Expected output : "United States of America"
 */
 
-const countryArray = ["Australia", "Germany", "United States of America"]
-console.log(countryArray[0].length)
+const countryArray = ["Australia", "Germany", "United States of America", "Peru"]
+console.log(getLongestString(countryArray))
+console.log(sortByLength(countryArray))
+console.log(`Longest string in array after sorting is ${sortByLength(countryArray)[0]}`)
 
-let longest = 0;
+function getLongestString(arr) {
+    let longest = 0;
 
-countryArray.forEach(function (x) {
-    if (x.length > longest) {
-        longest = x.length
-    }
-})
+    arr.forEach(function (x) {
+        if (x.length > longest) {
+            longest = x.length
+        }
+    })
 
-console.log(countryArray.filter(x => x.length === longest))
+    return (arr.filter(x => x.length === longest))
+}
+
+function sortByLength(arr) {
+    return arr.sort((a, b) => (b.length - a.length))
+}
