@@ -8,24 +8,19 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
     shazbit
 */
 
-const slide = "shazbit"
-console.log(doIHaveRepeatingCharacters(slide))
-getLongestNonRepeatingSubstring(slide)
+const slide = "shazbat"
+console.log(getLongestNonRepeatingSubstring(slide))
 
 
 function getLongestNonRepeatingSubstring(str) {
-    // if we find a substring without repeats, store the substring and its length and its start position
-    let nonRepeatingString = "";
-    let startPos = 0;
-
-    // loop through the string evaluating substrings of length 2 through the length of the string
-    for (let i = 0; i < str.length; i++) {
-        // WIP
-        // console.log(`${nonRepeatingString} starts at position ${startPos}`)
+    let maxUniqueLength = 2;
+    // loop through the string and print out each substring of increasing length
+    // print each 2-character substring
+    for (let i = 0; i <= str.length - maxUniqueLength + 1; i++) {
+        for (let j = maxUniqueLength; j <= str.length; j++) {
+            console.log(str.substring(i, i + j))
+        }
     }
-
-    // for each substring, start at the beginning of the string and advance 1 character at a time until we fine a substring without repeats
-
 }
 
 function doIHaveRepeatingCharacters(str) {
