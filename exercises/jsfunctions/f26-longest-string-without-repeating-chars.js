@@ -8,30 +8,34 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
     shazbit
 */
 
-const slide = "shazbat"
-console.log(getLongestNonRepeatingSubstring(slide))
-
+const slide = "shazbitxyzam";
+console.log(getLongestNonRepeatingSubstring(slide));
 
 function getLongestNonRepeatingSubstring(str) {
-    let maxUniqueLength = 2;
-    // loop through the string and print out each substring of increasing length
-    // print each 2-character substring
-    for (let i = 0; i <= str.length - maxUniqueLength + 1; i++) {
-        for (let j = maxUniqueLength; j <= str.length; j++) {
-            console.log(str.substring(i, i + j))
-        }
+  let maxFound = false;
+  let maxUniqueString = "";
+
+  for (let testLength = str.length; testLength > 1 && !maxFound; testLength--) {
+    for (let i = 0; i + testLength <= str.length && !maxFound; i++) {
+      const testString = str.substring(i, i + testLength);
+      if (!doIHaveRepeatingCharacters(testString)) {
+        maxUniqueString = testString;
+        maxFound = true;
+      }
     }
+  }
+  return maxUniqueString;
 }
 
 function doIHaveRepeatingCharacters(str) {
-    let repeats = false;
-    const letters = str.split('').sort()
-    for (var letter of letters) {
-        const instances = letters.filter(x => x === letter).length
-        if (instances > 1) {
-            repeats = true;
-            break;
-        }
+  let repeats = false;
+  const letters = str.split("").sort();
+  for (var letter of letters) {
+    const instances = letters.filter(x => x === letter).length;
+    if (instances > 1) {
+      repeats = true;
+      break;
     }
-    return repeats;
+  }
+  return repeats;
 }
