@@ -1,4 +1,4 @@
-// use Quokka to see results in VS Code
+f26-longest-string-without-repeating-chars.js// use Quokka to see results in VS Code
 
 /* 
 https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.php
