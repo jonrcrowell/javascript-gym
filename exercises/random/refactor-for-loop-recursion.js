@@ -1,6 +1,6 @@
 function counterFor() {
-  for(let i = 0; i <= 10; i++) {
-    console.log(i)
+  for (let i = 0; i <= 10; i++) {
+    console.log(i);
   }
 }
 
@@ -11,10 +11,10 @@ function counterRecursively(n) {
   // we need at least one base case and one recursion case
 
   // this is our base case
-  if(n >= 10) return;
+  if (n >= 10) return;
 
   // this is our recursion case
-  return counterRecursively(n+1)
+  return counterRecursively(n + 1);
 }
 
 counterRecursively(0);
