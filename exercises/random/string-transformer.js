@@ -16,6 +16,5 @@ function stringTransformer(str) {
 }
 
 const invertCase = c => (/[a-z]/.test(c) ? c.toUpperCase() : c.toLowerCase());
-console.log(stringTransformer("I am a 5-Star Hobbit"));
-console.log(stringTransformer("I am a sTring"));
-console.log(stringTransformer("YoLo yo"));
+
+module.exports = stringTransformer;
