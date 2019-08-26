@@ -5,7 +5,7 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
 */
 
 function changeUs(arr, func) {
-  const changed = arr.map(x => func(x))
+  const changed = arr.map(x => func(x));
   return changed;
 }
 
@@ -20,7 +20,7 @@ function square(x) {
 function triple(x) {
   return x * 3;
 }
-const start = [1, 2, 3]
-console.log(changeUs(start, add))
-console.log(changeUs(start, square))
-console.log(changeUs(start, triple))
+const start = [1, 2, 3];
+console.log(changeUs(start, add));
+console.log(changeUs(start, square));
+console.log(changeUs(start, triple));
