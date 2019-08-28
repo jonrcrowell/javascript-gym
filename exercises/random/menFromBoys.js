@@ -2,8 +2,8 @@ function menFromBoys(arr) {
   const dudes = Array.from(new Set([...arr]));
   const men = []; // array with even numbers sorted ascending
   const boys = []; // array with odd numbers sorted descending
-  for (var dude in dudes) {
-    arr[dude] % 2 === 0 ? men.push(arr[dude]) : boys.push(arr[dude]);
+  for (var dude of dudes) {
+    dude % 2 === 0 ? men.push(dude) : boys.push(dude);
   }
 
   const everybody = [
