@@ -7,6 +7,7 @@ accum("cwAt") -> "C-Ww-Aaa-Tttt"
 const alphaString = "cwAt";
 
 console.log(accum(alphaString));
+console.log(mumbler(alphaString));
 
 function accum(str) {
   let letterCount = 1;
@@ -22,3 +23,15 @@ function accum(str) {
   }
   return accumString;
 }
+
+// practice writing this style of function
+function mumbler(str) {
+  return str
+    .split("")
+    .map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i))
+    .join("-");
+}
+
+alphaString
+  .split("")
+  .forEach((c, i) => console.log(`${c} is in ${i} position`));
