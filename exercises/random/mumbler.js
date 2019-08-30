@@ -6,12 +6,14 @@ accum("cwAt") -> "C-Ww-Aaa-Tttt"
 
 const alphaString = "RqaEzty";
 
-console.log(
-  alphaString
+console.log(`Mumbler converts ${alphaString} into ${mumbler(alphaString)}`);
+
+function mumbler(str) {
+  return str
     .split("")
     .map(
       (letter, index) =>
         letter.toUpperCase() + letter.toLowerCase().repeat(index)
     )
-    .join("-")
-);
+    .join("-");
+}
