@@ -9,11 +9,10 @@ const alphaString = "RqaEzty";
 console.log(`Mumbler converts ${alphaString} into ${mumbler(alphaString)}`);
 
 function mumbler(str) {
+  const mumble = (letter, index) =>
+    letter.toUpperCase() + letter.toLowerCase().repeat(index);
   return str
     .split("")
-    .map(
-      (letter, index) =>
-        letter.toUpperCase() + letter.toLowerCase().repeat(index)
-    )
+    .map(mumble)
     .join("-");
 }
