@@ -19,7 +19,7 @@ function minimumSteps(numbers, value) {
   for (let i = 1; i <= numbers.length; i++) {
     runningTotal += numbers[i];
     steps++;
-    if (runningTotal > value) {
+    if (runningTotal >= value) {
       minSteps = steps;
       break;
     }
