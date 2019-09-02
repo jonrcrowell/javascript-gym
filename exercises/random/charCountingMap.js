@@ -15,3 +15,18 @@ function countChars(chars) {
 }
 const result = countChars("AaBcccbbbBBAc");
 console.table([...result]);
+
+// can I achieve the same result with an object?
+// why yes I can
+function oCountChars(chars) {
+  const charCount = {};
+  for (let ch of chars) {
+    ch = ch.toLowerCase();
+    const prevCount = charCount[ch] || 0;
+    charCount[ch] = prevCount + 1;
+  }
+  return charCount;
+}
+
+const oResult = oCountChars("AaBcccbbbBBAc");
+console.table(oResult);
