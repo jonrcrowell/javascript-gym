@@ -8,10 +8,28 @@ https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.p
     Expected output : 2 
 */
 
-const stringContainer = "Your mother was a hamster and your father smelt of elderberries."
-const letterToCount = "m";
+const stringContainer = "w3resource.com";
+const letterToCount = "o";
 
-const letterArray = stringContainer.split('').filter(x => x === letterToCount)
+const letterArray = stringContainer.split("").filter(x => x === letterToCount);
 console.log(letterArray);
-const letterCount = letterArray.length
-console.log(letterCount)
+const letterCount = letterArray.length;
+console.log(letterCount);
+
+// now let me try this using Rauschmayer's map approach
+console.log(
+  `Get letter count using a map. Count of letter ${letterToCount} in string("${stringContainer}") is ${countCharacters(
+    stringContainer,
+    letterToCount
+  )}.`
+);
+
+function countCharacters(characters, letter) {
+  const charCounts = new Map();
+  for (let character of characters) {
+    character = character.toLowerCase();
+    const prevCount = charCounts.get(character) || 0;
+    charCounts.set(character, prevCount + 1);
+  }
+  return charCounts.get(letter);
+}
