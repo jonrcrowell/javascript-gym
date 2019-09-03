@@ -98,3 +98,24 @@ function twoSum(nums, target) {
   nums.forEach(findSum);
   return number;
 }
+
+// try new approach using complement
+console.log(twoSumComp([3, 3, 17, 24, 53], 56));
+console.log(twoSumComp([3, 3], 6));
+console.log(twoSumComp([3, 3, 9, 12, 13, 14, 17, 24, 53], 41));
+
+function twoSumComp(nums, target) {
+  let number = [];
+  let found = false;
+
+  for (let i = 0; i <= nums.length && !found; i++) {
+    const second = nums.slice(i + 1);
+    const y = second.indexOf(target - nums[i]);
+    if (y > -1) {
+      number.push(i);
+      number.push(y + i + 1);
+      found = true;
+    }
+  }
+  return number;
+}
