@@ -54,6 +54,22 @@ const scores = {
     round2: 68,
     round3: 63,
     round4: "In progress"
+  },
+  "Fred Funk": {
+    relative: 4,
+    thru: "14",
+    round1: 72,
+    round2: 68,
+    round3: 63,
+    round4: "In progress"
+  },
+  "Freddy Couples": {
+    relative: -8,
+    thru: "14",
+    round1: 72,
+    round2: 68,
+    round3: 63,
+    round4: "In progress"
   }
 };
 
