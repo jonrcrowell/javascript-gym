@@ -32,7 +32,7 @@ const scores = {
     round4: "In progress"
   },
   "Dustin Johnson": {
-    relative: -2,
+    relative: "MC",
     thru: "14",
     round1: 72,
     round2: 68,
@@ -40,7 +40,7 @@ const scores = {
     round4: "In progress"
   },
   "Phil Mickelson": {
-    relative: -2,
+    relative: "MC",
     thru: "14",
     round1: 72,
     round2: 68,
@@ -48,7 +48,7 @@ const scores = {
     round4: "In progress"
   },
   "Tony Romo": {
-    relative: 11,
+    relative: "MC",
     thru: "14",
     round1: 72,
     round2: 68,
