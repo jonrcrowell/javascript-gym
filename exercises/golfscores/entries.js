@@ -72,7 +72,7 @@ function calcEntryScore(entry) {
     }
   }
   if (scores.length < 4) {
-    // hack for now because total is numeric as well as players scores
+    // TODO: hack for now because total is numeric as well as players scores
     // probably need to change player1 through player5 into objects within each entry
     entry["Total"] = "MC";
     entry["Made Cut"] = false;
