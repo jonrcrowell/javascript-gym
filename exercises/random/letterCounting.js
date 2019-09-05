@@ -29,7 +29,7 @@ function stringLetterCount(string) {
 
   // object to count occurrences
   const counts = {};
-  const incrementLetterCount = x => (counts[x] = counts[x] ? counts[x] + 1 : 1);
+  const incrementLetterCount = x => (counts[x] = counts[x] ? counts[x] + 1 : 1); // point free
   letters.map(incrementLetterCount);
 
   // map over object to create return value
