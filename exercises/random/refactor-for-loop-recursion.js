@@ -4,7 +4,7 @@ function counterFor() {
   }
 }
 
-counterFor();
+// counterFor();
 
 function counterRecursively(n) {
   console.log(n);
@@ -17,4 +17,4 @@ function counterRecursively(n) {
   return counterRecursively(n + 1);
 }
 
-counterRecursively(0);
+counterRecursively(5);
