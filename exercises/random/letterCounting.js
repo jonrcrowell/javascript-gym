@@ -16,7 +16,7 @@ Kata.StringLetterCount("") == ""
 Kata.StringLetterCount("555") == ""
 */
 
-const countMe = "555";
+const countMe = "This is a ... won't test sentence.";
 
 console.log(stringLetterCount(countMe));
 
