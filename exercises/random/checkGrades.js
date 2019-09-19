@@ -19,11 +19,13 @@ const answers = ["a", "a", "b", ""];
 console.log(checkExam(key, answers));
 
 function checkExam(array1, array2) {
-  let score = 0;
-  for (let i = 0; i < array1.length; i++) {
-    if (array2[i] === "") continue;
-    if (array1[i] === array2[i]) score += 4;
-    if (array1[i] !== array2[i] && array2[2] !== "") score -= 1;
-  }
-  return score < 0 ? 0 : score;
+  const total = array1.reduce((target, current, index) => {
+    array1[index] === array2[index]
+      ? (target += 4)
+      : array2[index]
+      ? (target -= 1)
+      : target;
+    return target;
+  }, 0);
+  return total < 0 ? 0 : total;
 }
