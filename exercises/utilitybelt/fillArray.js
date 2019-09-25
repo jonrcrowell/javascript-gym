@@ -1,8 +1,14 @@
 function fillArrayThrough(number) {
   return number < 0
     ? "Please pass in a positive number."
-    : [...Array(number + 1).keys()]; // if I want the array to start at 1
-  // append .slice(1) to the end of the array
+    : [...Array(number).keys()];
 }
 
-console.log(fillArrayThrough(20));
+function fillArrayFromOneThrough(number) {
+  return number < 0
+    ? "Please pass in a positive number."
+    : [...Array(number + 1).keys()].slice(1);
+}
+
+console.log(fillArrayThrough(5)); // [0, 1, 2, 3, 4]
+console.log(fillArrayFromOneThrough(5)); // [1, 2, 3, 4, 5]
