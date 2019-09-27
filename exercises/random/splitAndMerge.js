@@ -6,13 +6,11 @@
 */
 
 function splitAndMerge(str, sp) {
-  let merged = str.split(sp).map(x => x.split(""));
-  merged.map(x => {
-    x.join(sp);
-  });
-  // .join(sp);
-  // return merged.join(" ");
-  return merged;
+  return str
+    .split("")
+    .join(sp)
+    .split(`${sp} ${sp}`)
+    .join(" ");
 }
 
-console.log(splitAndMerge("My name is John", " "));
+console.log(splitAndMerge("My name is John", "-"));
