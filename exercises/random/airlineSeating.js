@@ -10,32 +10,49 @@ Test.assertDeepEquals(airlineSeating(["f",  "f",  "f",  "c",  "c"],1,1),
                                      ["p",  " ",  " ",  "s",  " "])
 */
 
-const seats = ["f", "f", "f", "c", "c"];
+const seats = ["f", "f", "f", "f", "f", "c", "c", "c", "c"];
 
 const p = 1;
-const s = 3;
+const s = 5;
 
 console.log(airlineSeating(seats, p, s));
 
 function airlineSeating(seats, premium, standard) {
-  const firstclassSeats = seats.filter(x => x === "f").length;
-  const coachSeats = seats.length - firstclassSeats;
-  const extraCoach = standard - coachSeats;
-  // if there are enough coach seats, seat them there
-  const coachStart = coachSeats >= standard ? firstclassSeats : premium;
+  let seating = seats.join("");
+  const numCoachSeats = seats.filter(x => x === "c").length;
+  let premiumSeats = "p".repeat(premium);
+  seating = premiumSeats + seating.slice(premium);
 
-  let seating = [...seats].fill("");
+  for (let i = 1; i <= standard; i++) {
+    seating =
+      i <= numCoachSeats
+        ? seating.replace(/c/, "s")
+        : seating.replace(/f/, "s");
+  }
+  return seating.replace(/f|c/g, " ").split("");
+}
 
-  for (let i = 0; i < premium; i++) {
-    seating[i] = "p";
-  }
+function airlineSeatingArray(seats, premium, standard) {
+  const premiumPassengers = Array(premium).fill("p");
+  const standardPassengers = Array(standard).fill("s");
+  let seating = [...premiumPassengers, ...seats.slice(premium)];
+  const coachSeatCount = seats.filter(seat => seat === "c").length;
 
-  // we have to fill up coach first, then start moving coach customers to first class
-  for (let i = 0; i < standard; i++) {
-    seating[i + coachStart] = "s";
-  }
-  if (seating.length > seats.length) {
-    return seating.slice(0, seats.length);
-  }
-  return seating;
+  // fill up coach seats
+  standardPassengers.forEach(standard => {
+    const coachSeat = seating.findIndex(seat => seat === "c");
+    seating[coachSeat] = "s";
+  });
+
+  // fill up empty first-class seats if needed
+  standardPassengers.slice(coachSeatCount).forEach(standard => {
+    const upgradeSeat = seating.findIndex(seat => seat === "f");
+    seating[upgradeSeat] = "s";
+  });
+
+  const manifest = seating.map(seat => {
+    if (seat === "f" || seat === "c") return " ";
+    return seat;
+  });
+  return manifest;
 }
