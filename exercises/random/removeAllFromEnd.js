@@ -11,12 +11,18 @@ function removeFromEnd(text, char) {
   return backwards.reverse().join("");
 }
 
-const text = "Howdy!!!";
+const text = "!!!!Howdy!!!";
 
 console.log(removeFromEnd(text, "!"));
 console.log(regexpRemoveFromEnd(text));
+console.log(regexpRemoveFromStart(text));
 
 // and a DRAMATICALLY better way to do this is with a regular expression
 function regexpRemoveFromEnd(text) {
   return text.replace(/!+$/, "");
+}
+
+// this doesn't work. must. learn. regexp.
+function regexpRemoveFromStart(text) {
+  return text.replace(/!+^/, "");
 }
