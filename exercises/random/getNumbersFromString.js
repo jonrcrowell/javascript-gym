@@ -12,3 +12,10 @@ function getNumberFromString(s) {
 function regexpGetNumberFromString(s) {
   return s.replace(/\D/g, ""); // uppercase D works, lowercase d gets all non-numeric values
 }
+
+/*
+D searches for non-digits
+d searches for digits
+full list of metacharacters here:
+
+*/
