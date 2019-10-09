@@ -13,3 +13,5 @@ console.log(doggies.replace(/doge?/g, `DOGE`));
 console.log(beeper.replace(/be*p/g, `BEEP`));
 
 console.log(beeper.replace(/be+p/g, `BEEP`));
+
+hello | ciao | salut | hallo | hola | ahoj | czesc;
