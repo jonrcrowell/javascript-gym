@@ -11,13 +11,3 @@ const recursiveSum = list => {
 };
 
 console.log(recursiveSum(numbers));
-
-// sum([2, 3, 4], 1) should equal 5.
-function sum(arr, number) {
-  if (number < 0) return 0;
-
-  let total = arr[number];
-  return total + sum(arr, number - 1);
-}
-
-console.log(sum(numbers, 2));
