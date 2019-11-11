@@ -1294,6 +1294,29 @@ const newStuff = {
 const newEntry = { ...Entry, ...newStuff };
 console.log(newEntry);
 
+const fullEntries = Entries.map(x => ({
+  ...{
+    Total: Math.floor(getRandomInt(-11, 11)),
+    MadeCut: false,
+    Player1MadeCut: true,
+    Player2MadeCut: true,
+    Player3MadeCut: false,
+    Player4MadeCut: false,
+    Player5MadeCut: false
+  },
+  ...x
+}));
+
+const missedCut = Entries.filter(x => x.Total === "MC");
+const madeCut = Entries.filter(x => x.Total !== "MC");
+
+const sortedEntries = [...madeCut].sort((a, b) => {
+  if (a.Total > b.Total) return 1;
+  if (a.Total < b.Total) return -1;
+});
+
+const leaderboardEntries = [...sortedEntries, ...missedCut];
+
 const newEntries = Entries.map(x => ({
   ...{
     Total: Math.floor(getRandomInt(-11, 11)),
