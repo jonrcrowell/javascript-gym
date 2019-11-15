@@ -16,4 +16,13 @@ String.prototype.camelCase = function() {
         .join("");
 };
 
-console.log(" honey   badger ".camelCase());
+String.prototype.toAlternatingCase = function() {
+  const swapCase = char =>
+    char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
+
+  return this.split("")
+    .map(x => swapCase(x))
+    .join("");
+};
+
+console.log("ShazBat".toAlternatingCase());
