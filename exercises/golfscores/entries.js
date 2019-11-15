@@ -46,9 +46,7 @@ const entry5 = {
   "Freddy Couples": scores["Freddy Couples"].relative,
   "Ernie Els": scores["Ernie Els"].relative,
   "Jon Rahm": scores["Jon Rahm"].relative,
-  "Dustin Johnson": scores["Dustin Johnson"].relative,
-  Total: 0,
-  "Made Cut": true
+  "Dustin Johnson": scores["Dustin Johnson"].relative
 };
 
 calcEntryScore(entry1);
@@ -79,6 +77,7 @@ function calcEntryScore(entry) {
   } else {
     scores.sort((a, b) => a - b);
     entry["Total"] = scores[0] + scores[1] + scores[2];
+    entry["Made Cut"] = true;
   }
 
   for (const key of Object.keys(entry)) {

@@ -4,6 +4,7 @@
   "description": "code that will change the world for the better",
   "main": "src/App.js",
   "dependencies": {
+    "date-fns": "^2.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },

@@ -41,6 +41,7 @@ console.log(sortByMultipleCriteria);
 // let's sort a list of golfers' scores
 const golfPicks = [
   {
+    entry: "Crowell #1",
     player1: "Rory",
     player1Score: -7,
     player2: "Tiger",
@@ -49,6 +50,7 @@ const golfPicks = [
     player3Score: -5
   },
   {
+    entry: "Crowell #2",
     player1: "Tiger",
     player1Score: -11,
     player2: "Phil",
@@ -57,6 +59,7 @@ const golfPicks = [
     player3Score: -3
   },
   {
+    entry: "Stein #1",
     player1: "Rahm",
     player1Score: -3,
     player2: "Dustin",
@@ -65,6 +68,7 @@ const golfPicks = [
     player3Score: 0
   },
   {
+    entry: "Nicholson #11",
     player1: "Rory",
     player1Score: -7,
     player2: "Sascha",
@@ -73,6 +77,7 @@ const golfPicks = [
     player3Score: 9
   },
   {
+    entry: "Brady #3",
     player1: "Rory",
     player1Score: -7,
     player2: "Tiger",
