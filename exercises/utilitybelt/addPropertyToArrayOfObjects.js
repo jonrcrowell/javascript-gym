@@ -27,3 +27,10 @@ const enrichedGolfers = golfers.map(x => ({
 console.log(golfers);
 console.log(enrichedGolfers);
 console.log("yo");
+
+const scores = {};
+const addPlayer = "Bobby McGee";
+const addScore = 8;
+scores["Tiger Woods"] = -7;
+scores[addPlayer] = addScore;
+console.log(scores);
