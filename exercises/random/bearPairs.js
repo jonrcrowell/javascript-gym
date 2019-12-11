@@ -29,3 +29,6 @@ function bears(x, s) {
   var pairs = s.match(/(8B)|(B8)/g) || []; // dramatically better way to accomplish the task
   return [pairs.join(""), pairs.length >= x];
 }
+
+const bCount = string => string.match(/B/g).length;
+console.log(bCount(bearString));
