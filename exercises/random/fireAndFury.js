@@ -9,46 +9,32 @@
 const parseMe = "FURYYYFIREYYFIREFIREFIREFIREFIREFIREFIREFIREFIREFIRE";
 const parseMe2 = "FIREYYFURYYFURYYFURRYFIRE";
 const parseMe3 = "FIREYYFURYYFURYYFURRYFIRE";
+const parseMe4 = "AAFIREBBFURYCC";
 
-console.log(fireAndFury(parseMe));
+console.log(fireAndFury(parseMe4));
+console.log(fireAndFury("FIRE FURY"));
 console.log(fireAndFury(parseMe2));
-console.log(fireAndFury(parseMe3));
 
 function fireAndFury(string) {
+  const fake = string => string.replace(/[EFIRUY]/g, "").length > 0;
   const getHits = string => string.match(/(FURY)|(FIRE)/g);
   const hits = getHits(string);
-  if (!hits) return "Fake tweet.";
+  if (!hits || fake(string)) return "Fake tweet.";
   let tweet = [];
+  let count = 1;
+
+  const furyString = count => `I am ${"really ".repeat(count - 1)}furious.`;
+  const fireString = count => `You ${"and you ".repeat(count - 1)}are fired!`;
 
   for (let i = 0; i < hits.length; i++) {
-    if (
-      hits[i] === "FURY" &&
-      hits[i + 1] === "FURY" &&
-      hits[i + 2] === "FURY"
-    ) {
-      tweet.push("I am really really furious.");
-      i += 2;
-      continue;
-    } else if (hits[i] === "FURY" && hits[i + 1] === "FURY") {
-      tweet.push("I am really furious.");
-      i++;
-      continue;
+    if (hits[i] === hits[i + 1]) {
+      count++;
+    } else {
+      hits[i] === "FURY"
+        ? tweet.push(furyString(count))
+        : tweet.push(fireString(count));
+      count = 1;
     }
-    if (
-      hits[i] === "FIRE" &&
-      hits[i + 1] === "FIRE" &&
-      hits[i + 2] === "FIRE"
-    ) {
-      tweet.push("You and you and you are fired!");
-      i += 2;
-      continue;
-    } else if (hits[i] === "FIRE" && hits[i + 1] === "FIRE") {
-      tweet.push("You and you are fired!");
-      i++;
-      continue;
-    } else if (hits[i] === "FURY") {
-      tweet.push("I am furious.");
-    } else if (hits[i] === "FIRE") tweet.push("You are fired!");
   }
 
   return tweet.join(" ");
