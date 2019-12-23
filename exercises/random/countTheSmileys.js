@@ -16,6 +16,7 @@ const countSmileys = arr => {
 };
 
 // filtering the array is much cleaner than using multiple if statements
+// also don't need to join the array into a string, apply the match to each element in the array
 const countSmileys2 = arr =>
   arr.filter(v => /(:|;)(-|~)?(\)|D)/.test(v)).length;
 
