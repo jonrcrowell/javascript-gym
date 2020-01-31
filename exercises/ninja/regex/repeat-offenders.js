@@ -1,4 +1,15 @@
 /*
+    test() is a method on the regex object that applies the regex to the string
+    passed in to the function
+    RegExp.prototype.test()
+        /a/.test("aaaa")
+
+    match() is a method on the string object that takes a regex as an argument
+    String.prototype.match()
+        "aaaa".match(/a/)
+        
+======================================================================================
+
     Optional character (it can appear once or not at all)
     - follow it with a ?
     - e.g. /t?est/ matches both test and est
