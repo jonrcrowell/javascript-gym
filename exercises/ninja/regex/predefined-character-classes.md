@@ -24,9 +24,9 @@
 
 \D               Any character but a decimal digit; equivalent to [^0-9]
 
-\w               Any alphanumeric character including underscore; equivalent to [A-Za-z0-9_]                   
+\w               Any alphanumeric character including underscore; equivalent to [A-Za-z0-9_]
 
-\W               Any character but alphanumeric and underscore characters; equivalent to [^A-Za-z0-9_]         
+\W               Any character but alphanumeric and underscore characters; equivalent to [^A-Za-z0-9_]
 
 \s               Any whitespace character (space, tab, form feed, and so on)
 
