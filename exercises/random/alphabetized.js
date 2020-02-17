@@ -12,7 +12,9 @@ function alphabetized(string) {
   return string
     .replace(/[^a-zA-Z]/g, "")
     .split("")
-    .sort((a, b) => a.localeCompare(b))
+    .sort((a, b) =>
+      a.toLowerCase() === b.toLowerCase() ? null : a.localeCompare(b)
+    )
     .join("");
 }
 
