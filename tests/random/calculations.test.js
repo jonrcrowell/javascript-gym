@@ -1,4 +1,4 @@
-const arithmetic = require("./calculations");
+const arithmetic = require("../../exercises/random/calculations");
 
 test("Yay Math! Let's add some stuff", () => {
   expect(arithmetic(1, 2, "+")).toBe(3);
