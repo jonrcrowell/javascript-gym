@@ -6,8 +6,6 @@ Whitespace and punctuation shall simply be removed!
 The input is restricted to contain no numerals and only words containing the english alphabet letters.
 */
 
-console.log(alphabetized("ChickEn Soup for the Soul")); // "BbeehHilloTy"
-
 function alphabetized(string) {
   return string
     .replace(/[^a-zA-Z]/g, "")

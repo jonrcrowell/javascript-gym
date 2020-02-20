@@ -1,4 +1,4 @@
-const alphabetized = require("./alphabetized");
+const alphabetized = require("../../exercises/random/alphabetized");
 
 it(`should sort the letters in a string in alpha order without changing case`, () => {
   expect(alphabetized("Bar")).toBe("aBr");

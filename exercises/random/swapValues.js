@@ -1,6 +1,5 @@
-function swapValues(arr) {
-  const [a, b] = [arr[1], arr[0]];
-  return [a, b];
-}
+const swapValues = arr => {
+  return [arr[1], arr[0]];
+};
 
-console.log(swapValues([1, 2]));
+module.exports = swapValues;

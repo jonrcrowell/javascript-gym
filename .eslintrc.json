@@ -3,6 +3,7 @@
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:react/recommended",
+    "plugin:jest/recommended",
     "plugin:jsx-a11y/recommended",
     "prettier",
     "prettier/react"
@@ -13,7 +14,7 @@
     "react-hooks/rules-of-hooks": 2,
     "react-hooks/exhaustive-deps": 1
   },
-  "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
+  "plugins": ["react", "import", "jsx-a11y", "react-hooks", "jest"],
   "parserOptions": {
     "ecmaVersion": 2016,
     "sourceType": "module",
@@ -24,7 +25,8 @@
   "env": {
     "es6": true,
     "browser": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "settings": {
     "react": {
