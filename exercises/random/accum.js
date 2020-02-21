@@ -35,3 +35,5 @@ function mumbler(str) {
 alphaString
   .split("")
   .forEach((c, i) => console.log(`${c} is in ${i} position`));
+
+module.exports = accum;
