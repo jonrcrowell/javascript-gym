@@ -10,4 +10,4 @@ const bloodAlcoholContent = (drinks, weight, sex, time) =>
     (sex === "male" ? 0.73 : 0.66) -
   0.015 * time;
 
-console.log(bloodAlcoholContent({ ounces: 12.5, abv: 0.4 }, 190, "male", 1));
+export default bloodAlcoholContent;
