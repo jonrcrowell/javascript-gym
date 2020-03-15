@@ -1,8 +1,8 @@
 module.exports = function() {
   return {
-    files: ["exercises/*.js"],
+    files: ["exercises/**/*.js"],
 
-    tests: ["tests/*.test.js"],
+    tests: ["tests/**/*test.js"],
 
     env: {
       type: "node",
