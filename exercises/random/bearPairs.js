@@ -8,7 +8,7 @@ Test.assertSimilar(bears(8, '8'), ["",false]);
 const bearString = "i8BBkBdBBBBBc8Bh888B8afhBBf8k8 ";
 
 console.log(bearPairCount(5, bearString));
-console.log(bears(5, bearString));
+console.log(bears(4, bearString));
 
 function bearPairCount(count, population) {
   let pairs = "";
@@ -25,10 +25,8 @@ function bearPairCount(count, population) {
 }
 
 function bears(x, s) {
-  var morePairs = s.match(/(Bk)|(Bd)|(fh)|(z%)/g); // playing around with this
   var pairs = s.match(/(8B)|(B8)/g) || []; // dramatically better way to accomplish the task
   return [pairs.join(""), pairs.length >= x];
 }
 
-const bCount = string => string.match(/B/g).length;
-console.log(bCount(bearString));
+module.exports = bears;
